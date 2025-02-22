@@ -1,13 +1,12 @@
 ﻿namespace University_Management
 {
+    using CoreLibrary;
     internal class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
-            Console.WriteLine("Hello, Team");
-            Console.WriteLine("Leader is me");
-            Console.WriteLine( "test faisal");
+           University u = new University();
+           
         }
     }
 }

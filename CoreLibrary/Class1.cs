@@ -5,10 +5,7 @@
 
     }
 
-    public class College
-    {
-
-    }
+    
 
     public class Teacher
     {

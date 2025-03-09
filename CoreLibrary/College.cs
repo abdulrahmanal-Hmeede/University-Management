@@ -58,13 +58,13 @@ namespace CoreLibrary
         }
 
         // The Constractor
-        public College(string inName, int inNumberOfStudent, List<Teacher> teachers, University inUniversity)
+        public College(string inName, int inNumberOfStudent, List<Teacher> inTeachers, University inUniversity)
         {
             Id= counter++;
             Name = inName;
             NumberOfStudent = inNumberOfStudent;
-            this.teachers = teachers;
-            this.university = inUniversity;
+            teachers = inTeachers;
+            university = inUniversity;
         }
 
         // Print college information

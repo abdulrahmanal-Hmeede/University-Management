@@ -11,6 +11,7 @@
   <ItemGroup>
     <ProjectReference Include="..\CoreLibrary\CoreLibrary.csproj" />
     <ProjectReference Include="..\HelpersLibrary\HelpersLibrary.csproj" />
+    <ProjectReference Include="..\OperationsLibrary\OperationsLibrary.csproj" />
   </ItemGroup>
 
 </Project>

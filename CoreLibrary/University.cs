@@ -71,6 +71,10 @@ namespace CoreLibrary
             }
         }
 
+        public University() 
+        {
+
+        }
         public University(string Name, int UniversityOpeningYear,List<College> college,universityType Type)
         {
             id = counter++;
@@ -81,14 +85,13 @@ namespace CoreLibrary
 
         }
 
-        //تحقق من طلبات الطباعة داخل القوسين
         public void print()
         {
             Console.WriteLine(
-                $"Id: {id}," +
+                $"Id: {id} ," +
                 $" Name: {name}," +
-                $"university Opening Year : {universityOpeningYear}" +
-                $"university Type : {Type}");
+                $"university Opening Year : {universityOpeningYear}, " +
+                $"university Type : {Type} ");
         }
 
 

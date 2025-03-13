@@ -11,8 +11,11 @@
     {
         static void Main(string[] args)
         {
-            University u = new University("iusr",2015);
-            List<Teacher> ts = new List<Teacher> ();
+            List<College> colleges = new List<College>();
+            University u = new University("iusr",2015, colleges, universityType.PrivateUniversity);
+            u.print();
+            //University.universityType.PublicUniversity
+            List <Teacher> ts = new List<Teacher> ();
             College college = new College("ahmed",200,ts,u);
             college.printData();
             //Helpers h = new Helpers();

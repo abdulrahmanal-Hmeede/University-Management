@@ -15,6 +15,7 @@ namespace CoreLibrary
         private int numberOfStudent;
         public List<Teacher> teachers;
         public University university;
+        public static List<College> colleges = new List<College>();
 
 
 
@@ -58,13 +59,13 @@ namespace CoreLibrary
         }
 
         // The Constractor
-        public College(string inName, int inNumberOfStudent, List<Teacher> inTeachers, University inUniversity)
+        public College(string inName, int inNumberOfStudent, University inUniversity)
         {
             Id= counter++;
             Name = inName;
             NumberOfStudent = inNumberOfStudent;
-            teachers = inTeachers;
             university = inUniversity;
+            colleges.Add(this);
         }
 
         // Print college information

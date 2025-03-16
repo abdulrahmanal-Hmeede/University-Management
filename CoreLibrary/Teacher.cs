@@ -9,6 +9,7 @@ namespace CoreLibrary
     
         public class Teacher
         {
+            public static List<Teacher> teachers = new List<Teacher>();
             public static int counter;
             private int id;
             public int Id
@@ -76,6 +77,7 @@ namespace CoreLibrary
                 this.Name = name;
                 this.Specialization = sp;
                 this.Salary = salary;
+            teachers.Add(this);
             }
 
             // Print Data

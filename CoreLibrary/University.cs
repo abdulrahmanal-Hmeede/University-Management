@@ -9,28 +9,16 @@ namespace CoreLibrary
 {
     public class University
     {
-        public enum universityType
-        {
-            PublicUniversity,
-            PrivateUniversity
-        };
-        
 
         // state
         private static int counter = 0;
-        private universityType type;
         private int id;
-        private int universityOpeningYear;
         private string name;
+        private int universityOpeningYear;
+        public string type;
         public List<College> colleges;
+        public static List<University> universities = new List<University>();
 
-
-        
-        public universityType Type
-        {
-            get { return type; }
-            set { type = value; }
-        }
 
         public int Id
         {
@@ -83,13 +71,22 @@ namespace CoreLibrary
         {
 
         }
-        public University(string Name, int UniversityOpeningYear,List<College> college,universityType Type)
+        public University(string Name, int UniversityOpeningYear,string Type)
+        {
+            id = ++counter;
+            this.Name = Name;
+            this.UniversityOpeningYear = UniversityOpeningYear;
+            universities.Add(this);
+            this.type = Type;
+
+        }
+        public University(string Name, int UniversityOpeningYear,List<College> college,string Type)
         {
             id = ++counter;
             this.Name = Name;
             this.UniversityOpeningYear = UniversityOpeningYear;
             this.colleges = college;
-            this.Type = Type;
+            this.type = Type;
 
         }
 
@@ -99,7 +96,7 @@ namespace CoreLibrary
                 $"Id: {id} ," +
                 $" Name: {name}," +
                 $"university Opening Year : {universityOpeningYear}, " +
-                $"university Type : {Type} ");
+                $"university Type : {type} ");
         }
 
 

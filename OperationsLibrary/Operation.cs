@@ -26,7 +26,7 @@ namespace OperationsLibrary
         {
             try
             {
-                File.AppendAllText(Src, ContentToAdd + "\n");
+                File.WriteAllText(Src, ContentToAdd + "\n");
                 Console.WriteLine("Added to the text...");
             }
             catch (Exception x)

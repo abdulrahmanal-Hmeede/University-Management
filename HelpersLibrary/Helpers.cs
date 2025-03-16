@@ -5,7 +5,6 @@ using System.Drawing;
 namespace HelpersLibrary
 {
     public delegate bool CheckCol(College college);
-    //public delegate bool CheckUniv(University university);
     public static class Helpers
     {
 

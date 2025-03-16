@@ -26,7 +26,7 @@ namespace OperationsLibrary
         {
             try
             {
-                File.AppendAllText(Src, ContentToAdd);
+                File.AppendAllText(Src, ContentToAdd + "\n");
                 Console.WriteLine("Added to the text...");
             }
             catch (Exception x)
@@ -39,7 +39,6 @@ namespace OperationsLibrary
         //Method to delet
         public void DeletTextToFile(string Src, string CountentForDelet) 
         {
-            
              try
               {
                 if (File.Exists(Src))

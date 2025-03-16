@@ -9,24 +9,23 @@ namespace CoreLibrary
 {
     public class University
     {
-        //public static List<University> universities = new List<University>();
-
-        //public List<College> Colleges= new List<College>();
-
-
         public enum universityType
         {
             PublicUniversity,
             PrivateUniversity
         };
+        
 
+        // state
+        private static int counter = 0;
         private universityType type;
-        private static int counter = 1;
         private int id;
         private int universityOpeningYear;
         private string name;
-        public List<College> college;
+        public List<College> colleges;
 
+
+        
         public universityType Type
         {
             get { return type; }
@@ -49,7 +48,15 @@ namespace CoreLibrary
             }
             set
             {
-                universityOpeningYear = value;
+
+                if (value < 2025 && value > 1800) {
+                    universityOpeningYear = value;
+                }
+                else
+                {
+                    //////////////////////////////
+                }
+                
             }
         }
 
@@ -78,10 +85,10 @@ namespace CoreLibrary
         }
         public University(string Name, int UniversityOpeningYear,List<College> college,universityType Type)
         {
-            id = counter++;
+            id = ++counter;
             this.Name = Name;
             this.UniversityOpeningYear = UniversityOpeningYear;
-            this.college = college;
+            this.colleges = college;
             this.Type = Type;
 
         }

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -8,29 +9,16 @@ namespace CoreLibrary
 {
     public class University
     {
-        //public static List<University> universities = new List<University>();
 
-        //public List<College> Colleges= new List<College>();
-
-
-        public enum universityType
-        {
-            PublicUniversity,
-            PrivateUniversity
-        };
-
-        private universityType type;
-        private static int counter = 1;
+        // state
+        private static int counter = 0;
         private int id;
-        private int universityOpeningYear;
         private string name;
-        public List<College> college;
+        private int universityOpeningYear;
+        public string type;
+        public List<College> colleges;
+        public static List<University> universities = new List<University>();
 
-        public universityType Type
-        {
-            get { return type; }
-            set { type = value; }
-        }
 
         public int Id
         {
@@ -48,7 +36,15 @@ namespace CoreLibrary
             }
             set
             {
-                universityOpeningYear = value;
+
+                if (value < 2025 && value > 1800) {
+                    universityOpeningYear = value;
+                }
+                else
+                {
+                    //////////////////////////////
+                }
+                
             }
         }
 
@@ -75,23 +71,32 @@ namespace CoreLibrary
         {
 
         }
-        public University(string Name, int UniversityOpeningYear,List<College> college,universityType Type)
+        public University(string Name, int UniversityOpeningYear,string Type)
         {
-            id = counter++;
+            id = ++counter;
             this.Name = Name;
             this.UniversityOpeningYear = UniversityOpeningYear;
-            this.college = college;
-            this.Type = Type;
+            universities.Add(this);
+            this.type = Type;
+
+        }
+        public University(string Name, int UniversityOpeningYear,List<College> college,string Type)
+        {
+            id = ++counter;
+            this.Name = Name;
+            this.UniversityOpeningYear = UniversityOpeningYear;
+            this.colleges = college;
+            this.type = Type;
 
         }
 
         public void print()
         {
-            Console.WriteLine(
+                Console.WriteLine(
                 $"Id: {id} ," +
                 $" Name: {name}," +
                 $"university Opening Year : {universityOpeningYear}, " +
-                $"university Type : {Type} ");
+                $"university Type : {type} ");
         }
 
 

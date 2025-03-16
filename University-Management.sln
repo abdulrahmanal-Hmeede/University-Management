@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CoreLibrary", "CoreLibrary\
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HelpersLibrary", "HelpersLibrary\HelpersLibrary.csproj", "{F5C1E81C-BC68-4191-8AEB-F8C4925F58F0}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperationsLibrary", "OperationsLibrary\OperationsLibrary.csproj", "{D488576E-4D36-45FB-8FB6-3DE5095DE389}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OperationsLibrary", "OperationsLibrary\OperationsLibrary.csproj", "{D488576E-4D36-45FB-8FB6-3DE5095DE389}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI", "GUI\GUI.csproj", "{56C48F6E-8577-4278-A3EC-022E8050AE3C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{D488576E-4D36-45FB-8FB6-3DE5095DE389}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D488576E-4D36-45FB-8FB6-3DE5095DE389}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{D488576E-4D36-45FB-8FB6-3DE5095DE389}.Release|Any CPU.Build.0 = Release|Any CPU
+		{56C48F6E-8577-4278-A3EC-022E8050AE3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{56C48F6E-8577-4278-A3EC-022E8050AE3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{56C48F6E-8577-4278-A3EC-022E8050AE3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{56C48F6E-8577-4278-A3EC-022E8050AE3C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
